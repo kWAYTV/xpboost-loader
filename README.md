@@ -10,7 +10,7 @@ Setting it up:<br />
 **Vac bypass loader Path** preferable drop it in D: Drive root directory and don't edit the .bat default path<br /><br />
 Main *doesn't* use sandboxie neither vac bypass<br />
 Set up the *timeouts* according to your pc specs.<br />
-To add more bots:<br />
+To add more bots add this code below line line 41 as much times as bots you want to add:<br />
 ```
 echo [+] Waiting to open bot(nextnumber).
 timeout /t 120 /nobreak > nul
@@ -27,3 +27,4 @@ for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
 # Links
 [Discord](https://discord.gg/kws)<br />
 [Telegram](https://t.me/kwaytv)
+[xpboost.lua](https://discord.gg/xpboost)
