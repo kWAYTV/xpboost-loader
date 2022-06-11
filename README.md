@@ -27,6 +27,7 @@ echo [+] Injecting!
 echo --------------------
 for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
 ```
+Be aware that you need to edit the *x* and *y* value<br />
 # VAC-Bypass-Loader Isn't Legit!
 Then make it yourself!
 ```
