@@ -1,6 +1,7 @@
 # XPBOOST.LUA Loader, auto load and inject the accounts
-I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br />
+I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
 Place everything in a folder with **ONLY** the *template.bat* and the *skeet loader* (exe)<br /><br />
+Before telling me i try to rat you with the **.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#i-doubt-that-vac-bypass-loader-is-legit)
 # Setting it up
 Install SanboxiePlus<br /><br />
 Fill the **template.bat** as follows:<br /><br />
@@ -26,7 +27,7 @@ echo [+] Injecting!
 echo --------------------
 for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
 ```
-# I Doubt that VAC-Bypass-Loader Is Legit!
+# VAC-Bypass-Loader Is Legit!
 Then make it yourself!
 ```
 https://github.com/danielkrupinski/VAC-Bypass
