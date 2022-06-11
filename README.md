@@ -2,7 +2,7 @@
 I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
 Place everything in a folder with **ONLY** the *template.bat* and the *skeet loader* (exe)<br /><br />
 Before telling me i try to rat you with the **.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-is-legit)<br /><br />
-Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closen when opening.
+Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closen when opening the *.bat*.
 # Setting it up
 Install SanboxiePlus<br /><br />
 Fill the **template.bat** as follows:<br /><br />
