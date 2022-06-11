@@ -27,7 +27,7 @@ echo [+] Injecting!
 echo --------------------
 for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
 ```
-# VAC-Bypass-Loader Is Legit!
+# VAC-Bypass-Loader Isn't Legit!
 Then make it yourself!
 ```
 https://github.com/danielkrupinski/VAC-Bypass
