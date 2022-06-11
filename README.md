@@ -9,8 +9,8 @@ Fill the **template.bat** as follows:<br /><br />
 **/box:name**<br /> With the name of each respective sandboxie box (one per account except main)<br />
 **bot1_user bot1_pass**<br /> username password format (whith every one).<br />
 **Steam.exe path**<br /> Self explanatory.<br />
-**Sandboxie Path**<br /> Self explanatory.<br />
-**Vac bypass loader Path**<br /> Preferable drop the .exe in D: Drive root directory and don't edit the .bat default path<br /><br />
+**Sandboxie.exe Path**<br /> Self explanatory.<br />
+**VAC-Bypass-Loader.exe Path**<br /> Preferable drop the .exe in D: Drive root directory and don't edit the .bat default path<br /><br />
 Main *doesn't* use sandboxie neither vac bypass<br />
 Set up the *timeouts* according to your pc specs.<br /><br />
 # How to add more bots
