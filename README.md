@@ -10,6 +10,20 @@ Setting it up:<br />
 **Vac bypass loader Path** preferable drop it in D: Drive root directory and don't edit the .bat default path<br /><br />
 Main *doesn't* use sandboxie neither vac bypass<br />
 Set up the *timeouts* according to your pc specs.<br />
+To add more bots:<br />
+```
+echo [+] Waiting to open bot(nextnumber).
+timeout /t 120 /nobreak > nul
+echo [+] Opening bot(nextnumber).
+echo --------------------
+start "" "c:/program files/Sandboxie-Plus/Start.exe" /box:boxname "D:\VAC-Bypass-Loader.exe" "D:\Steam\Steam.exe" -silent  -login bot(nextnumber)_user bot(nextnumber)_pass -applaunch 730 -x 0 -y 0 -sw -w 640 -h 480 -low -novid -window -noborder -nosound
+echo [+] Waiting to inject.
+echo --------------------
+timeout /t 60 /nobreak > nul
+echo [+] Injecting!
+echo --------------------
+for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
+```
 # Links
 [Discord](https://discord.gg/kws)<br />
 [Telegram](https://t.me/kwaytv)
