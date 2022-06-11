@@ -28,5 +28,5 @@ for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
 ```
 # Links
 [Discord](https://discord.gg/kws)<br />
-[Telegram](https://t.me/kwaytv)
+[Telegram](https://t.me/kwaytv)<br />
 [xpboost.lua](https://discord.gg/xpboost)
