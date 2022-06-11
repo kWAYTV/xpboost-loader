@@ -26,6 +26,21 @@ echo [+] Injecting!
 echo --------------------
 for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
 ```
+# I Doubt that VAC-Bypass-Loader Is Legit!
+Then make it yourself!
+```
+https://github.com/danielkrupinski/VAC-Bypass
+1. Search for msgbox in the solution, anything that is a success msgbox, delete the line, leave errors!
+2. Compile
+
+https://github.com/R3nzTheCodeGOD/DLL-Byte-Converter
+1. Use this python project to convert the DLL to an array of bytes.
+2. Copy the output.
+
+https://github.com/danielkrupinski/VAC-Bypass-Loader
+1. Replace the binary code from binary.h with the output from the python converter.
+2. Then compile exe 
+```
 # Links
 [Discord](https://discord.gg/kws)<br />
 [Telegram](https://t.me/kwaytv)<br />
