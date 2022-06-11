@@ -1,7 +1,7 @@
 # xpboost-loader
 XPBOOST.LUA Loader, auto load and inject the accounts.<br />
 Install SanboxiePlus<br />
-I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click [annoying](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).lace everything in a folder with **ONLY** the *template.bat* and the *skeet loader* (exe)<br /><br />
+I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click [annoying](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png). Place everything in a folder with **ONLY** the *template.bat* and the *skeet loader* (exe)<br /><br />
 # Setting it up
 Steps:<br />
 **/box:name** with the name of each respective sandboxie box (one per account without main)<br />
