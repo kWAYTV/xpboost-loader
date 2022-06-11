@@ -1,9 +1,10 @@
 # XPBOOST.LUA Loader, auto load and inject the accounts
-Install SanboxiePlus<br />
 I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br />
 Place everything in a folder with **ONLY** the *template.bat* and the *skeet loader* (exe)<br /><br />
 # Setting it up
-Steps:<br />
+Steps:<br /><br />
+Install SanboxiePlus<br />
+Fill the **template.bat** as follows:<br />
 **/box:name** with the name of each respective sandboxie box (one per account without main)<br />
 **bot1_user bot1_pass** username password format (whith every one).<br />
 **Steam path**<br />
