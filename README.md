@@ -5,11 +5,11 @@ Before telling me i try to rat you with the **.exe** head up [here](https://gith
 # Setting it up
 Install SanboxiePlus<br /><br />
 Fill the **template.bat** as follows:<br /><br />
-**/box:name** with the name of each respective sandboxie box (one per account without main)<br />
-**bot1_user bot1_pass** username password format (whith every one).<br />
+**/box:name**<br /> with the name of each respective sandboxie box (one per account without main)<br />
+**bot1_user bot1_pass**<br /> username password format (whith every one).<br />
 **Steam path**<br />
 **Sandboxie Path**<br />
-**Vac bypass loader Path** preferable drop it in D: Drive root directory and don't edit the .bat default path<br /><br />
+**Vac bypass loader Path**<br /> preferable drop it in D: Drive root directory and don't edit the .bat default path<br /><br />
 Main *doesn't* use sandboxie neither vac bypass<br />
 Set up the *timeouts* according to your pc specs.<br /><br />
 # How to add more bots
