@@ -1,15 +1,16 @@
 # XPBOOST.LUA Loader, auto load and inject the accounts
 I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
 Place everything in a folder with **ONLY** the *template.bat* and the *skeet loader* (exe)<br /><br />
-Before telling me i try to rat you with the **.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-is-legit)
+Before telling me i try to rat you with the **.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-is-legit)<br />
+Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closen when opening.
 # Setting it up
 Install SanboxiePlus<br /><br />
 Fill the **template.bat** as follows:<br /><br />
-**/box:name**<br /> with the name of each respective sandboxie box (one per account without main)<br />
+**/box:name**<br /> With the name of each respective sandboxie box (one per account except main)<br />
 **bot1_user bot1_pass**<br /> username password format (whith every one).<br />
-**Steam path**<br />
-**Sandboxie Path**<br />
-**Vac bypass loader Path**<br /> preferable drop it in D: Drive root directory and don't edit the .bat default path<br /><br />
+**Steam.exe path**<br /> Self explanatory.<br />
+**Sandboxie Path**<br /> Self explanatory.<br />
+**Vac bypass loader Path**<br /> Preferable drop the .exe in D: Drive root directory and don't edit the .bat default path<br /><br />
 Main *doesn't* use sandboxie neither vac bypass<br />
 Set up the *timeouts* according to your pc specs.<br /><br />
 # How to add more bots
