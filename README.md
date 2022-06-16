@@ -88,7 +88,9 @@ https://github.com/R3nzTheCodeGOD/DLL-Byte-Converter<br />
 
 https://github.com/danielkrupinski/VAC-Bypass-Loader<br />
 1. Replace the binary code from binary.h with the output from the python converter.<br />
-2. Then compile exe 
+2. Then compile exe<br />
+<br />
+Dont break my head asking for help with this.
 
 # Links
 [Discord](https://discord.gg/MRNuVCXuTS)<br />
