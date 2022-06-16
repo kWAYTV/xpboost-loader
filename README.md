@@ -44,8 +44,8 @@ Just create a config.json in the same directory and fill it with this informatio
     }
 }
 ```
-**..._paths**: Are normal directory paths. Ex: `C:/program files/Sandboxie-Plus/Start.exe`,`D:/Steam/Steam.exe`,`D:/VAC-Bypass-Loader.exe`
-**user and pass** Self explanatory. Bot 1 will be *top left*, bot2 will be *top right*, bot3 will be *bottom mid* and main in *top mid*
+**..._paths**: Are normal directory paths. Ex: `C:/program files/Sandboxie-Plus/Start.exe`,`D:/Steam/Steam.exe`,`D:/VAC-Bypass-Loader.exe`<br />
+**user and pass** Self explanatory. Bot 1 will be *top left*, bot2 will be *top right*, bot3 will be *bottom mid* and main in *top mid*<br />
 **box** the name of the sandboxie box for each respective account.
 # How to add more bots (.bat)
 To add more bots add this code below line line 41 as much times as bots you want to add:<br />
@@ -70,26 +70,26 @@ Let me know in discord if you need help
 *Soon...*
 
 # To do list
-- Custom delays
-- Fix auto cfg generator
-- Detect csgo opening and injection instead of waiting
-- I'm sure forgetting smth
+- Custom delays<br />
+- Fix auto cfg generator<br />
+- Detect csgo opening and injection instead of waiting<br />
+- I'm sure forgetting smth<br />
 
 # VAC-Bypass-Loader Isn't Legit!
-Then make it yourself!
-```
+Then make it yourself!<br />
+
 https://github.com/danielkrupinski/VAC-Bypass
-1. Search for msgbox in the solution, anything that is a success msgbox, delete the line, leave errors!
-2. Compile
+1. Search for msgbox in the solution, anything that is a success msgbox, delete the line, leave errors!<br />
+2. Compile<br />
 
-https://github.com/R3nzTheCodeGOD/DLL-Byte-Converter
-1. Use this python project to convert the DLL to an array of bytes.
-2. Copy the output.
+https://github.com/R3nzTheCodeGOD/DLL-Byte-Converter<br />
+1. Use this python project to convert the DLL to an array of bytes.<br />
+2. Copy the output.<br />
 
-https://github.com/danielkrupinski/VAC-Bypass-Loader
-1. Replace the binary code from binary.h with the output from the python converter.
+https://github.com/danielkrupinski/VAC-Bypass-Loader<br />
+1. Replace the binary code from binary.h with the output from the python converter.<br />
 2. Then compile exe 
-```
+
 # Links
 [Discord](https://discord.gg/MRNuVCXuTS)<br />
 [Telegram](https://t.me/kwaytv)<br />
