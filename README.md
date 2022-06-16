@@ -3,8 +3,6 @@ I basically replaced vac bypass success windows by beeps to make it a procces *w
 Place everything in a folder with **ONLY** the *template.bat*/*loader.py* and the *skeet loader* (exe)<br /><br />
 Before telling me i try to rat you with the **VAC-Bypass-Loader.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-isnt-legit)<br /><br />
 Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closed when opening the *.bat* or *.py*.
-# Important for the .py users
-Fill the *config.json* on the .py loader besides it having the auto config feature as it's not fixed yet.
 # Settings (.bat)
 Install SanboxiePlus<br /><br />
 Fill the **template.bat** as follows:<br /><br />
@@ -16,7 +14,7 @@ Fill the **template.bat** as follows:<br /><br />
 Main *doesn't* use sandboxie neither vac bypass<br />
 Set up the *timeouts* according to your pc specs. In the .py default timeouts are *80 seconds*, will change in the future updates.<br /><br />
 # Settings (.py)
-Just create a config.json in the same directory and fill it with this information
+Just create a config.json in the same directory and fill it with this information or run the script for **auto config generation**
 ```json
 {
     "sandboxie_path": "null",
