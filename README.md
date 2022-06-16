@@ -1,7 +1,7 @@
 # XPBOOST.LUA Loader, auto load and inject the accounts
 I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
 Place everything in a folder with **ONLY** the *template.bat*/*loader.py* and the *skeet loader* (exe)<br /><br />
-Before telling me i try to rat you with the **VAC-Bypass-Loader.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-is-legit)<br /><br />
+Before telling me i try to rat you with the **VAC-Bypass-Loader.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-isnt-legit)<br /><br />
 Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closed when opening the *.bat* or *.py*.
 # Important for the .py users
 Fill the *config.json* on the .py loader besides it having the auto config feature as it's not fixed yet.
