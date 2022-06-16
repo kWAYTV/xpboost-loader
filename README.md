@@ -69,6 +69,12 @@ Let me know in discord if you need help
 # How to add more bots (.py)
 *Soon...*
 
+# To do list
+- Custom delays
+- Fix auto cfg generator
+- Detect csgo opening and injection instead of waiting
+- I'm sure forgetting smth
+
 # VAC-Bypass-Loader Isn't Legit!
 Then make it yourself!
 ```
