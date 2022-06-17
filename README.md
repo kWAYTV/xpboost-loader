@@ -37,7 +37,7 @@ Just create a config.json in the same directory and fill it with this informatio
 **user and pass** Self explanatory. Bot 1 will be *top left*, bot2 will be *top right*, bot3 will be *bottom mid* and main in *top mid*<br />
 **box** the name of the sandboxie box for each respective account.
 # How to add more bots (.py)
-*Soon...*
+I will try either to make a feature to customize the bots you use or ask me in Discord but cba.
 # To do list
 - Custom delays<br />
 - Detect csgo opening and injection instead of waiting<br />
