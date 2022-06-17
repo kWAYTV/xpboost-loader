@@ -1,5 +1,5 @@
 # XPBOOST.LUA Loader
-Made by kWAY#1701 and darby#0001<><br />
+Made by kWAY#1701 and darby#0001<br /><br />
 I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
 Place everything in a folder with **ONLY** the *loader.py* and the *skeet loader* (exe)<br /><br />
 Before telling me i try to rat you with the **VAC-Bypass-Loader.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-isnt-legit)<br /><br />
