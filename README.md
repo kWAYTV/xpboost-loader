@@ -1,3 +1,4 @@
+# Finally fixed autoconfig on the python loader
 # XPBOOST.LUA Loader, auto load and inject the accounts
 I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
 Place everything in a folder with **ONLY** the *template.bat*/*loader.py* and the *skeet loader* (exe)<br /><br />
