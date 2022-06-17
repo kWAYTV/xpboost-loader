@@ -783,7 +783,7 @@ def boost():
     slow_type(Fore.CYAN + "Logs: " + Style.RESET_ALL + "Starting main!", 0.001)
     os.system(f"title XPBOOST.LUA Loader - Starting main!  - discord.gg/kws")
     os.system(
-        f'start "" "{sandPath}" -silent -login {main_user} {main_pass} -applaunch 730 -x 640 -y 0 -sw -w 640 -h 480 -low -novid -window -noborder -nosound'
+        f'start "" "{steamPath}" -silent -login {main_user} {main_pass} -applaunch 730 -x 640 -y 0 -sw -w 640 -h 480 -low -novid -window -noborder -nosound'
     )
     slow_type(
         Fore.YELLOW
