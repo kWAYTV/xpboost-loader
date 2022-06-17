@@ -88,6 +88,7 @@ def config_exists():
             json.dump(config, f)
     return config
     exists = True
+    restart()
 
 config_exists()
 #Import data from json file
