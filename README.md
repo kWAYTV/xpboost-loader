@@ -36,6 +36,8 @@ Just create a config.json in the same directory and fill it with this informatio
 **..._paths**: Are normal directory paths. Ex: `C:/program files/Sandboxie-Plus/Start.exe`,`D:/Steam/Steam.exe`,`D:/VAC-Bypass-Loader.exe`<br />
 **user and pass** Self explanatory. Bot 1 will be *top left*, bot2 will be *top right*, bot3 will be *bottom mid* and main in *top mid*<br />
 **box** the name of the sandboxie box for each respective account.
+**seconds** in the source of the .py search for "seconds = 80" and replace that *80* for the wait time according to your specs. Will add customization for the .exe soon.<br />
+
 # How to add more bots (.py)
 I will try either to make a feature to customize the bots you use or ask me in Discord but cba.
 # To do list
