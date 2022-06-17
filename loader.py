@@ -87,8 +87,8 @@ def config_exists():
     return config
     exists = True
 
-#Import data from json
 config_exists()
+#Import data from json file
 with open("config.json", "r") as config_file:
     config = json.load(config_file)
 
@@ -707,7 +707,6 @@ def config_filled():
     else:
         pass
     filled = True
-    restart()
 
 #Boosting executing function
 def boost():
