@@ -1,7 +1,7 @@
 #################IMPORTS#######################
 import os, glob, subprocess, time, json, sys  #
 from colorama import Fore, Back, Style        #
-from colorama import init                     #
+from colorama import init                #
 ###############################################
 
 #################CODE##########################

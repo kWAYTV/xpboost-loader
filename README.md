@@ -1,21 +1,11 @@
-# Finally fixed autoconfig on the python loader
-# XPBOOST.LUA Loader, auto load and inject the accounts
+# XPBOOST.LUA Loader
+Made by kWAY#1701 and darby#0001<><br />
 I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
-Place everything in a folder with **ONLY** the *template.bat*/*loader.py* and the *skeet loader* (exe)<br /><br />
+Place everything in a folder with **ONLY** the *loader.py* and the *skeet loader* (exe)<br /><br />
 Before telling me i try to rat you with the **VAC-Bypass-Loader.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-isnt-legit)<br /><br />
-Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closed when opening the *.bat* or *.py*.
-# Settings (.bat)
-Install SanboxiePlus<br /><br />
-Fill the **template.bat** as follows:<br /><br />
-**/box:name**<br /> With the name of each respective sandboxie box (one per account except main)<br />
-**bot1_user bot1_pass**<br /> username password format (whith every one).<br />
-**Steam.exe path**<br /> Self explanatory.<br />
-**Sandboxie.exe Path**<br /> Self explanatory.<br />
-**VAC-Bypass-Loader.exe Path**<br /> Preferable drop the .exe in D: Drive root directory and don't edit the .bat default path<br /><br />
-Main *doesn't* use sandboxie neither vac bypass<br />
-Set up the *timeouts* according to your pc specs. In the .py default timeouts are *80 seconds*, will change in the future updates.<br /><br />
+Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closed when opening the *.py*.
 # Settings (.py)
-Just create a config.json in the same directory and fill it with this information or run the script for **auto config generation**
+Just create a config.json in the same directory and fill it with this information or run the script for **auto config generation**.
 ```json
 {
     "sandboxie_path": "null",
@@ -46,34 +36,12 @@ Just create a config.json in the same directory and fill it with this informatio
 **..._paths**: Are normal directory paths. Ex: `C:/program files/Sandboxie-Plus/Start.exe`,`D:/Steam/Steam.exe`,`D:/VAC-Bypass-Loader.exe`<br />
 **user and pass** Self explanatory. Bot 1 will be *top left*, bot2 will be *top right*, bot3 will be *bottom mid* and main in *top mid*<br />
 **box** the name of the sandboxie box for each respective account.
-# How to add more bots (.bat)
-To add more bots add this code below line line 41 as much times as bots you want to add:<br />
-```bat
-echo [+] Waiting to open bot(nextnumber).
-timeout /t 120 /nobreak > nul
-echo [+] Opening bot(nextnumber).
-echo --------------------
-start "" "c:/program files/Sandboxie-Plus/Start.exe" /box:boxname "D:\VAC-Bypass-Loader.exe" "D:\Steam\Steam.exe" -silent  -login bot(nextnumber)_user bot(nextnumber)_pass -applaunch 730 -x 0 -y 0 -sw -w 640 -h 480 -low -novid -window -noborder -nosound
-echo [+] Waiting to inject.
-echo --------------------
-timeout /t 60 /nobreak > nul
-echo [+] Injecting!
-echo --------------------
-for /r "." %%a in (*.exe) do start "" "%%~fa" --load=1
-```
-Be aware that you need to edit the *x* and *y* value to the position on your screen<br />
-Let me know in discord if you need help
-
-
 # How to add more bots (.py)
 *Soon...*
-
 # To do list
 - Custom delays<br />
-- Fix auto cfg generator<br />
 - Detect csgo opening and injection instead of waiting<br />
 - I'm sure forgetting smth<br />
-
 # VAC-Bypass-Loader Isn't Legit!
 Then make it yourself!<br />
 
