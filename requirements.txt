@@ -1,0 +1,7 @@
+colorama
+os
+glob
+subprocess
+time
+json
+sys
