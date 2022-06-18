@@ -1,6 +1,4 @@
-# XPBOOST.LUA Loader
-Made by kWAY#1701 and darby#0001<br /><br />
-I basically replaced vac bypass success windows by beeps to make it a procces *without* having to click annoying shit like [this](https://cdn.discordapp.com/attachments/984877542529962054/985120358204076032/unknown.png).<br /><br />
+# XPBOOST.LUA Loader | Made by kWAY#1701 and darby#0001
 Place everything in a folder with **ONLY** the *loader.py* and the *skeet loader* (exe)<br /><br />
 Before telling me i try to rat you with the **VAC-Bypass-Loader.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-isnt-legit)<br /><br />
 Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closed when opening the *.py*.
@@ -30,18 +28,18 @@ Just create a config.json in the same directory and fill it with this informatio
         "username": "null",
         "password": "null",
         "box": "null"
-    }
+    },
+    "sleep": "null",
 }
 ```
-**..._paths**: Are normal directory paths. Ex: `C:/program files/Sandboxie-Plus/Start.exe`,`D:/Steam/Steam.exe`,`D:/VAC-Bypass-Loader.exe`<br />
-**user and pass** Self explanatory. Bot 1 will be *top left*, bot2 will be *top right*, bot3 will be *bottom mid* and main in *top mid*<br />
-**box** the name of the sandboxie box for each respective account.<br />
-**seconds** in the source of the .py search for "seconds = 80" and replace that *80* for the wait time according to your specs. Will add customization for the .exe soon.<br />
+- **..._paths**: Are normal directory paths. Ex: `C:/program files/Sandboxie-Plus/Start.exe`,`D:/Steam/Steam.exe`,`D:/VAC-Bypass-Loader.exe`<br />
+- **user and pass** Self explanatory. Bot 1 will be *top left*, bot2 will be *top right*, bot3 will be *bottom mid* and main in *top mid*<br />
+- **box** The name of the sandboxie box for each respective account.<br />
+- **sleep** The time in *seconds* that a csgo window delays to be **fully open** *plus 5 seconds* on your pc<br />
 
 # How to add more bots (.py)
 I will try either to make a feature to customize the bots you use or ask me in Discord but cba.
 # To do list
-- Custom delays<br />
 - Detect csgo opening and injection instead of waiting<br />
 - I'm sure forgetting smth<br />
 # VAC-Bypass-Loader Isn't Legit!
