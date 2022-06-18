@@ -1,14 +1,15 @@
 #################IMPORTS#######################
 import os, glob, subprocess, time, json, sys  #
-from colorama import Fore, Back, Style        #
-from colorama import init                #
+from colorama import Fore, Back, Style  #
+from colorama import init  #
+
 ###############################################
 
 #################CODE##########################
 clear = lambda: os.system("cls" if os.name in ("nt", "dos") else "clear")
 os.system(f"title Shillify Discord - Starting... - discord.gg/kws")
 
-#Slow type
+# Slow type
 def slow_type(text, speed, newLine=True):
     for i in text:
         print(i, end="", flush=True)
@@ -16,7 +17,8 @@ def slow_type(text, speed, newLine=True):
     if newLine:
         print()
 
-#Intro text
+
+# Intro text
 intro = f"""
 {Fore.MAGENTA}════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}
 ██╗  ██╗██████╗ ██████╗  ██████╗  ██████╗ ███████╗████████╗██╗     ██╗   ██╗ █████╗ 
@@ -32,32 +34,49 @@ intro = f"""
 {Fore.MAGENTA}╰───────────────╯{Fore.RESET}
 """
 
-#Intro title and shit
+# Intro title and shit
 def print_intro():
     clear()
     slow_type(intro + Style.RESET_ALL, 0.001)
 
-#Global declarations
+
+# Global declarations
 global exists
 global filled
 filled = False
 exists = False
 
-#Start Loader
+# Start Loader
 def StartLoader():
-    subprocess.call('for /r "." %a in (*.exe) do start "" "%~fa" --load=1', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    subprocess.call(
+        'for /r "." %a in (*.exe) do start "" "%~fa" --load=1',
+        shell=True,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.STDOUT,
+    )
 
-#Restart function
+
+# Restart function
 def restart():
-    slow_type(Fore.CYAN + "Restart: " + Style.RESET_ALL +  "Trying to restart, if it doesn't work, do it manually.  - discord.gg/kws", 0.001)
+    slow_type(
+        Fore.CYAN
+        + "Restart: "
+        + Style.RESET_ALL
+        + "Trying to restart, if it doesn't work, do it manually.  - discord.gg/kws",
+        0.001,
+    )
     time.sleep(2)
     subprocess.call([sys.executable, os.path.realpath(__file__)] + sys.argv[1:])
 
-#Config exists function
+
+# Config exists function
 def config_exists():
     global exists
     os.system(f"title XPBOOST.LUA Loader - Checking config...  - discord.gg/kws")
-    slow_type(Fore.MAGENTA + "Checker: " + Style.RESET_ALL + "Checking if config exists...",0.001,)
+    slow_type(
+        Fore.MAGENTA + "Checker: " + Style.RESET_ALL + "Checking if config exists...",
+        0.001,
+    )
     try:
         with open("config.json") as f:
             config = json.load(f)
@@ -91,8 +110,9 @@ def config_exists():
     exists = True
     restart()
 
+
 config_exists()
-#Import data from json file
+# Import data from json file
 with open("config.json", "r") as config_file:
     config = json.load(config_file)
 
@@ -113,12 +133,42 @@ with open("config.json", "r") as config_file:
     sleep = config["sleep"]
 
 
-#Check if config is filled function
+# Check if config is filled function
 def config_filled():
     global sandPath, steamPath, bypassPath, bot1_user, bot1_pass, bot1_box, bot2_user, bot2_pass, bot2_box, bot3_user, bot3_pass, bot3_box, main_user, main_pass, filled, sleep
-    if sandPath or steamPath or bypassPath or bot1_user or bot1_pass or bot1_box or bot2_user or bot2_pass or bot3_user or bot3_pass or bot3_box or main_user or main_pass or sleep != "null":
+    if (
+        sandPath
+        or steamPath
+        or bypassPath
+        or bot1_user
+        or bot1_pass
+        or bot1_box
+        or bot2_user
+        or bot2_pass
+        or bot3_user
+        or bot3_pass
+        or bot3_box
+        or main_user
+        or main_pass
+        or sleep != "null"
+    ):
         filled = True
-    if sandPath or steamPath or bypassPath or bot1_user or bot1_pass or bot1_box or bot2_user or bot2_pass or bot3_user or bot3_pass or bot3_box or main_user or main_pass or sleep == "null":
+    if (
+        sandPath
+        or steamPath
+        or bypassPath
+        or bot1_user
+        or bot1_pass
+        or bot1_box
+        or bot2_user
+        or bot2_pass
+        or bot3_user
+        or bot3_pass
+        or bot3_box
+        or main_user
+        or main_pass
+        or sleep == "null"
+    ):
         filled = False
     if filled == False and sandPath == "null":
         clear()
@@ -152,12 +202,15 @@ def config_filled():
             sandPath = input()
 
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
 
             sandPath = sandPath
             config.update(update)
@@ -195,12 +248,15 @@ def config_filled():
             steamPath = input()
 
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
             steamPath = steamPath
             config.update(update)
             with open("config.json", "w") as jsfile:
@@ -236,12 +292,15 @@ def config_filled():
             bypassPath = input()
 
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
             bypassPath = bypassPath
             config.update(update)
             with open("config.json", "w") as jsfile:
@@ -279,13 +338,16 @@ def config_filled():
             )
             bot1_user = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-            
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -322,13 +384,16 @@ def config_filled():
             )
             bot1_pass = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-            
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -363,13 +428,16 @@ def config_filled():
             )
             bot1_box = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-            
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -403,13 +471,16 @@ def config_filled():
             )
             bot2_user = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-            
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -446,13 +517,16 @@ def config_filled():
             )
             bot2_pass = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-            
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -487,13 +561,16 @@ def config_filled():
             )
             bot2_box = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-            
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -527,13 +604,16 @@ def config_filled():
             )
             bot3_user = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-            
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -570,13 +650,16 @@ def config_filled():
             )
             bot3_pass = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
-             
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
+
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -611,12 +694,15 @@ def config_filled():
             )
             bot3_box = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -650,12 +736,15 @@ def config_filled():
             )
             main_user = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -691,12 +780,15 @@ def config_filled():
             )
             main_pass = input()
             update = {
-                "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-             "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-             "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-             "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-             "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
+                "sandboxie_path": sandPath,
+                "steam_path": steamPath,
+                "bypass_path": bypassPath,
+                "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
+                "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
+                "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
+                "main": {"username": main_user, "password": main_pass},
+                "sleep": sleep,
+            }
             config.update(update)
             with open("config.json", "w") as jsfile:
                 json.dump(config, jsfile)
@@ -711,11 +803,17 @@ def config_filled():
             if filled == False and sleep == "null":
                 clear()
                 unset = True
-                slow_type(Fore.RED + "Checker: " + Style.RESET_ALL + "Sleeping time not set!", 0.001)
-                os.system(f"title XPBOOST.LUA Loader - Sleeping time not set!  - discord.gg/kws")
+                slow_type(
+                    Fore.RED + "Checker: " + Style.RESET_ALL + "Sleeping time not set!",
+                    0.001,
+                )
+                os.system(
+                    f"title XPBOOST.LUA Loader - Sleeping time not set!  - discord.gg/kws"
+                )
                 while unset == True:
                     slow_type(
-                        Fore.RED + "Checker: " + Style.RESET_ALL + "No settings found!", 0.001
+                        Fore.RED + "Checker: " + Style.RESET_ALL + "No settings found!",
+                        0.001,
                     )
                     slow_type(
                         Fore.BLUE
@@ -726,19 +824,38 @@ def config_filled():
                     )
                     sleep = input()
                     update = {
-                        "sandboxie_path": sandPath, "steam_path": steamPath, "bypass_path": bypassPath,
-                     "bot1": {"username": bot1_user, "password": bot1_pass, "box": bot1_box},
-                     "bot2": {"username": bot2_user, "password": bot2_pass, "box": bot2_box},
-                     "bot3": {"username": bot3_user, "password": bot3_pass, "box": bot3_box},
-                     "main": {"username": main_user, "password": main_pass}, "sleep": sleep
-                     }
+                        "sandboxie_path": sandPath,
+                        "steam_path": steamPath,
+                        "bypass_path": bypassPath,
+                        "bot1": {
+                            "username": bot1_user,
+                            "password": bot1_pass,
+                            "box": bot1_box,
+                        },
+                        "bot2": {
+                            "username": bot2_user,
+                            "password": bot2_pass,
+                            "box": bot2_box,
+                        },
+                        "bot3": {
+                            "username": bot3_user,
+                            "password": bot3_pass,
+                            "box": bot3_box,
+                        },
+                        "main": {"username": main_user, "password": main_pass},
+                        "sleep": sleep,
+                    }
                     config.update(update)
                     with open("config.json", "w") as jsfile:
                         json.dump(config, jsfile)
                         jsfile.close()
                     unset = False
                     slow_type(
-                        Fore.GREEN + "Success: " + Style.RESET_ALL + "Sleeping time set!", 0.001
+                        Fore.GREEN
+                        + "Success: "
+                        + Style.RESET_ALL
+                        + "Sleeping time set!",
+                        0.001,
                     )
                     os.system(
                         f"title XPBOOST.LUA Loader - Sleeping time set!  - discord.gg/kws"
@@ -747,7 +864,8 @@ def config_filled():
         pass
     filled = True
 
-#Boosting executing function
+
+# Boosting executing function
 def boost():
     global sandPath, steamPath, bypassPath, bot1_user, bot1_pass, bot1_box, bot2_user, bot2_pass, bot2_box, bot3_user, bot3_pass, bot3_box, main_user, main_pass, sleep
     seconds = int(sleep)
@@ -846,28 +964,69 @@ def boost():
     slow_type(Fore.RED + "Finished: " + Style.RESET_ALL + "Done! Closing...", 0.001)
     exit()
 
-#Start with logo and logs function
+
+# Start with logo and logs function
 def start():
     global sandPath, steamPath, bypassPath, bot1_user, bot1_pass, bot1_box, bot2_user, bot2_pass, bot2_box, bot3_user, bot3_pass, bot3_box, main_user, main_pass, exists, filled
     config_filled()
     if exists == True and filled == True:
-        slow_type(Fore.MAGENTA + "Checker: " + Style.RESET_ALL + "Config exists and it's filled!",0.001,)
-        slow_type(Fore.MAGENTA + "Checker: " + Style.RESET_ALL + "Starting...",0.001,)
+        slow_type(
+            Fore.MAGENTA
+            + "Checker: "
+            + Style.RESET_ALL
+            + "Config exists and it's filled!",
+            0.001,
+        )
+        slow_type(
+            Fore.MAGENTA + "Checker: " + Style.RESET_ALL + "Starting...",
+            0.001,
+        )
         time.sleep(1)
         clear()
         print_intro()
         os.system(f"title Shillify Discord - Ready! - discord.gg/kws")
-        slow_type("Good luck with " + Fore.GREEN + f"boosting" + Style.RESET_ALL + "!\n\n", 0.001)
+        slow_type(
+            "Good luck with " + Fore.GREEN + f"boosting" + Style.RESET_ALL + "!\n\n",
+            0.001,
+        )
         time.sleep(2)
         boost()
     if exists == True and filled == False:
-        slow_type(Fore.MAGENTA + "Checker: " + Style.RESET_ALL + "Config exists but it's not filled!",0.001)
+        slow_type(
+            Fore.MAGENTA
+            + "Checker: "
+            + Style.RESET_ALL
+            + "Config exists but it's not filled!",
+            0.001,
+        )
         config_filled()
         restart()
-    if sandPath or steamPath or bypassPath or bot1_user or bot1_pass or bot1_box or bot2_user or bot2_pass or bot3_user or bot3_pass or bot3_box or main_user or main_pass or sleep == "null":
+    if (
+        sandPath
+        or steamPath
+        or bypassPath
+        or bot1_user
+        or bot1_pass
+        or bot1_box
+        or bot2_user
+        or bot2_pass
+        or bot3_user
+        or bot3_pass
+        or bot3_box
+        or main_user
+        or main_pass
+        or sleep == "null"
+    ):
         filled = False
-        slow_type(Fore.MAGENTA + "Checker: " + Style.RESET_ALL + "Config exists but something is not filled!",0.001)
+        slow_type(
+            Fore.MAGENTA
+            + "Checker: "
+            + Style.RESET_ALL
+            + "Config exists but something is not filled!",
+            0.001,
+        )
         config_filled()
         restart()
+
 
 start()
