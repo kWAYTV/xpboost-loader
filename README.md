@@ -3,7 +3,7 @@ Place everything in a folder with **ONLY** the *loader.py* and the *skeet loader
 Before telling me i try to rat you with the **VAC-Bypass-Loader.exe** head up [here](https://github.com/kWAYTV/xpboost-loader#vac-bypass-loader-isnt-legit)<br /><br />
 Main account doesn't use sandbox neither vac bypass loader. Be sure to have steam and sandboxie closed when opening the *.py*.
 # Settings (.py)
-Just create a config.json in the same directory and fill it with this information or run the script for **auto config generation**.
+Run the script for **auto config generation**.
 ```json
 {
     "sandboxie_path": "null",
