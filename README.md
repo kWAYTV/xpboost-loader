@@ -38,7 +38,7 @@ Run the script for **auto config generation**.
 - **sleep** The time in *seconds* that a csgo window delays to be **fully open** *plus 5 seconds* on your pc<br />
 
 # How to add more bots (.py)
-I will try either to make a feature to customize the bots you use or ask me in Discord but cba.
+I will try either to make a feature to customize the bots you use or ask me in Discord.
 # To do list
 - Detect csgo opening and injection instead of waiting<br />
 - I'm sure forgetting smth<br />
